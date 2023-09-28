@@ -1,0 +1,247 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#swiper {
+  margin: 6rem 0;
+}
+#swiper .swiper-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#swiper .swiper-image img {
+  width: 500px;
+  height: 400px;
+}
+#swiper .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  position: absolute;
+  top: 40%;
+  left: 34%;
+}
+#swiper .btns #prev-btn,
+#swiper .btns #next-btn {
+  padding: 30px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}
+
+.sample-slider {
+  width: 500px;
+  position: relative;
+}
+.sample-slider .swiper-wrapper img {
+  position: relative;
+  width: 500px;
+  height: 600px;
+}
+.sample-slider .swiper-button-prev,
+.sample-slider .swiper-button-next {
+  font-family: "revicons";
+  font-size: 10px;
+  color: #ffffff;
+  width: 60px;
+  height: 114px;
+  display: block;
+  line-height: 130px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sample-slider .swiper-button-prev::after,
+.sample-slider .swiper-button-next::after {
+  font-size: 20px;
+}
+.sample-slider .swiper-pagination {
+  bottom: 43px;
+  left: 0;
+  width: 100%;
+}
+.sample-slider .swiper-pagination .swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 15px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 14px));
+}
+
+:root {
+  --swiper-theme-color: #3f3f3f;
+}
+
+.tab-menu {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tab-menu .tab-elements {
+  display: flex;
+}
+.tab-menu .tab-elements div {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #bccbe9;
+  font-size: 30px;
+  padding: 20px;
+  cursor: pointer;
+}
+.tab-menu .tab-elements .active {
+  background-color: white;
+}
+.tab-menu .tab-content {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  width: 365px;
+  height: auto;
+}
+.tab-menu .tab-content div {
+  display: none;
+  padding: 20px;
+  font-size: 30px;
+  background-color: white;
+}
+.tab-menu .tab-content .show {
+  display: block;
+}
+
+.todo-list-app .heading {
+  font-size: 1.5rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list-app form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list-app form input {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  background: white;
+  border-radius: 2rem;
+}
+.todo-list-app form .todo-input {
+  border: 1px solid red;
+}
+.todo-list-app form button {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  border: none;
+  background: white;
+  border-radius: 2rem;
+  color: red;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  margin-left: 0.5rem;
+}
+.todo-list-app form button #icon {
+  margin-top: 0.3rem;
+  margin-left: -8px;
+}
+.todo-list-app form button:hover {
+  color: white;
+  background: red;
+}
+.todo-list-app .todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list-app .todo-container .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo-list-app .todo-container .todo-list .todo {
+  margin: 0.5rem;
+  padding-left: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 2rem;
+}
+.todo-list-app .todo-container .todo-list .todo li {
+  flex: 1;
+}
+.todo-list-app .trash-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  background: rgb(171, 171, 171);
+}
+.todo-list-app .complete-btn {
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: red;
+}
+.todo-list-app .todo-item {
+  padding: 0rem 0.5rem;
+}
+.todo-list-app .fa-trash {
+  pointer-events: none;
+}
+.todo-list-app .fa-check-circle {
+  pointer-events: none;
+}
+.todo-list-app .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.todo-list-app .slide {
+  transform: translateX(20%);
+  opacity: 0;
+}
+.todo-list-app select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  color: red;
+  width: 10rem;
+  height: 3.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.todo-list-app .select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.todo-list-app .select::after {
+  content: "▼";
+  position: absolute;
+  background: red;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.todo-list-app .select:hover::after {
+  background: white;
+  color: red;
+}/*# sourceMappingURL=style.css.map */

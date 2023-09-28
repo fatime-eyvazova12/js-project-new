@@ -1,0 +1,265 @@
+$background-color_1: #bccbe9;
+$background-color_2: white;
+$color_1: white;
+$color_2: red;
+$color_3: black;
+$font-family_1: "Poppins", sans-serif;
+$background-color_3: mediumslateblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#swiper {
+  margin: 6rem 0;
+  .swiper-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 500px;
+      height: 400px;
+    }
+  }
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    position: absolute;
+    top: 40%;
+    left: 34%;
+
+    #prev-btn,
+    #next-btn {
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      color: white;
+      font-size: 30px;
+    }
+  }
+}
+
+.sample-slider {
+  width: 500px;
+  position: relative;
+  .swiper-wrapper {
+    img {
+      position: relative;
+      width: 500px;
+      height: 600px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      font-size: 20px;
+    }
+    font-family: "revicons";
+    font-size: 10px;
+    color: #ffffff;
+    width: 60px;
+    height: 114px;
+    display: block;
+    line-height: 130px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .swiper-pagination {
+    bottom: 43px;
+    left: 0;
+    width: 100%;
+    .swiper-pagination-bullet {
+      width: var(
+        --swiper-pagination-bullet-width,
+        var(--swiper-pagination-bullet-size, 15px)
+      );
+      height: var(
+        --swiper-pagination-bullet-height,
+        var(--swiper-pagination-bullet-size, 14px)
+      );
+    }
+  }
+}
+:root {
+  --swiper-theme-color: #3f3f3f;
+}
+
+.tab-menu {
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .tab-elements {
+    display: flex;
+    div {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      background-color: $background-color_1;
+      font-size: 30px;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .active {
+      background-color: $background-color_2;
+    }
+  }
+  .tab-content {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 365px;
+    height: auto;
+    div {
+      display: none;
+      padding: 20px;
+      font-size: 30px;
+      background-color: $background-color_2;
+    }
+    .show {
+      display: block;
+    }
+  }
+}
+
+.todo-list-app {
+  .heading {
+    font-size: 1.5rem;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      padding: 0.5rem;
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      border: none;
+      background: white;
+      border-radius: 2rem;
+    }
+    .todo-input {
+      border: 1px solid red;
+    }
+    button {
+      #icon {
+        margin-top: 0.3rem;
+        margin-left: -8px;
+      }
+      padding: 0.5rem;
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      border: none;
+      background: white;
+      border-radius: 2rem;
+      color: $color_2;
+      background: white;
+      cursor: pointer;
+      transition: all 0.3 ease;
+      margin-left: 0.5rem;
+      &:hover {
+        color: $color_1;
+        background: red;
+      }
+    }
+  }
+
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .todo-list {
+      min-width: 30%;
+      list-style: none;
+      .todo {
+        margin: 0.5rem;
+        padding-left: 0.5rem;
+        background: white;
+        color: $color_3;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+        border-radius: 2rem;
+        li {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .trash-btn {
+    color: $color_1;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: rgb(171, 171, 171);
+  }
+  .complete-btn {
+    color: $color_1;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: red;
+  }
+  .todo-item {
+    padding: 0rem 0.5rem;
+  }
+  .fa-trash {
+    pointer-events: none;
+  }
+  .fa-check-circle {
+    pointer-events: none;
+  }
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  .slide {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  select {
+    appearance: none;
+    outline: none;
+    border: none;
+    color: $color_2;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    &::after {
+      content: "\25BC";
+      position: absolute;
+      background: red;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &::after {
+        background: white;
+        color: $color_2;
+      }
+    }
+  }
+}

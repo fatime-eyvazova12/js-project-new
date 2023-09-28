@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <div id="swiper">
+      <div class="swiper-image">
+        <img id="image" src="/src/images/barcelona.jpeg" alt="image" />
+      </div>
+      <div class="btns">
+        <i id="prev-btn" class="fa-solid fa-chevron-left"></i>
+        <i id="next-btn" class="fa-solid fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="swiper sample-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/src/images/barcelona.jpeg" />
+        </div>
+        <div class="swiper-slide"><img src="/src/images/eyfel.jpeg" /></div>
+        <div class="swiper-slide"><img src="/src/images/isvechre.jpeg" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Tab menu -->
+    <div class="tab-menu">
+      <div class="tab-elements">
+        <div data-index="1" class="active">Home</div>
+        <div data-index="2">About</div>
+        <div data-index="3">Contact</div>
+      </div>
+      <div class="tab-content">
+        <div data-index="1" class="show">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste
+          doloribus unde ullam doloremque eos autem ad nulla accusamus? Modi at
+          minima numquam accusamus repudiandae perspiciatis nostrum architecto
+          voluptatem quasi? Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quia ratione corporis earum laudantium sapiente autem
+          praesentium error neque illum adipisci modi ea, consectetur rerum
+          pariatur laborum aperiam at commodi! Impedit. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Tenetur, quasi porro dolorum
+          deleniti velit fuga perspiciatis veniam minus perferendis facere sit
+          doloribus aliquid illum adipisci. Quam quasi maxime perferendis
+          dolorem.
+        </div>
+        <div data-index="2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          maxime itaque veritatis iste soluta placeat obcaecati laudantium
+          repellat corrupti! Eius sunt magnam? Perspiciatis facere error
+          suscipit quisquam quibusdam. Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Totam, corporis voluptatem quo dignissimos eius quis
+          perferendis vero culpa reiciendis nulla quisquam fugit minima sed
+          molestiae excepturi beatae repudiandae ea? Aliquid! Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Enim sapiente officia vel
+          consequuntur, hic at quis? Illo repellendus dolores totam facilis sunt
+          sequi qui hic, nulla ratione harum porro .
+        </div>
+        <div data-index="3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          sit incidunt nostrum? Magni, quam vero, magnam odio similique ipsam
+          minima et repellat rerum cupiditate totam in repudiandae. Sed, dicta
+          corrupti? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Asperiores, dolore quas quis earum incidunt voluptas! Ducimus quod
+          libero aliquid consequatur et modi porro officia, quibusdam quas
+          commodi placeat maxime qui? Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ab ea debitis eligendi accusamus deleniti maxime
+          pariatur. Assumenda, facere placeat eius quam magni accusantium aut
+          quae minima iure atque incidunt illum.
+        </div>
+      </div>
+    </div>
+
+    <!-- Todo list app -->
+    <div class="todo-list-app">
+      <div class="heading">
+        <h1>My To Do List</h1>
+      </div>
+      <form>
+        <input type="text" class="todo-input" />
+        <button class="todo-button" type="submit">
+          <i id="icon" class="fas fa-plus-circle fa-lg"></i>
+        </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="incomplete">Incomplete</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+  </body>
+  <script src="/src/js/index.js"></script>
+</html>
